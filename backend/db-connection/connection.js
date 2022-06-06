@@ -10,3 +10,14 @@ export const client = new Client({
     },
 })
 
+function booksTable(){
+    var query = `CREATE TABLE IF NOT EXISTS bookskey.books (
+        book_id UUID,
+        book_title TEXT,
+        author text,
+        category text,
+        PRIMARY KEY (book_id))`
+    client.execute(query);
+}
+booksTable();
+
